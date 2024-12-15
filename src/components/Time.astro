@@ -71,11 +71,17 @@ const theClockApp = () => {
   setInterval(theClockApp, 1000);
 </script>
 
-<section class="time">
-    <h1>Time</h1>
+<div class="time card bg-base-100 shadow-xl row-span-1 flex">
+  <div class="card-body object-fit">
+    <h2 class="card-title">Time</h2>
     <time>
       <data class="hours">HH</data> : <data class="minutes">MM</data> :
       <data class="seconds">SS</data>
       <data class="amOrPM">AM/PM</data>
     </time>
-<section>
+  </div>
+  <figure>
+    <img class="icon" 
+    src="https://via.placeholder.com/150" alt="Placeholder">
+  </figure>
+</div>

@@ -10,11 +10,10 @@
 		<title>Smart Mirror</title>
 	</head>
 	<body>
-	
-    <main class="">
-        <slot />
-
-	</main>        
-
+		<div class="flex items-center justify-center p-16">
+			<main class="grid sm:grid-rows-4 lg:grid-rows-3 sm:grid-cols-1 lg:grid-cols-3 gap-5">
+				<slot />
+			</main>   
+		</div>
 	</body>
 </html>
