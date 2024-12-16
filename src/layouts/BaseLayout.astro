@@ -9,11 +9,11 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Smart Mirror</title>
 	</head>
-	<body>
-		<div class="flex items-center justify-center p-16">
-			<main class="grid sm:grid-rows-4 lg:grid-rows-3 sm:grid-cols-1 lg:grid-cols-3 gap-5">
-				<slot />
-			</main>   
-		</div>
+	<body class="bg-blue-100 flex h-screen w-screen justify-center mt-12 p-5">
+		<main class="">
+			<slot />
+
+		</main>        
+
 	</body>
 </html>

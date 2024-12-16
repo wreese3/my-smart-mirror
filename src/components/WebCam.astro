@@ -21,19 +21,25 @@ if (navigator.mediaDevices.getUserMedia) {
 
 <style>
 
-  /* Smart Mirror */
-  video { 
-    
-      /* stack behind content     */
-      z-index: -1;
-      /* fill background with video    */
-    object-fit: cover;
-    object-position: center;
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-  </style>
+/* Smart Mirror */
+video { 
+  
+  /* Position video      */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Stretch to fill viewport */
+    width: 100vw;
+    height: 100vh;
+    /* stack behind content     */
+    z-index: -1;
+    opacity: 0.3;
+    /* fill background with video    */
+  object-fit: cover;
+  object-position: center;
+  
+}
+</style>
 
 <!-- Webcam -->
 <div class="webcam card bg-base-200 shadow-xl lg:col-span-2 lg:row-span-2 flex justify-center card-bordered">

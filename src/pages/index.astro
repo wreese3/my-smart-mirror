@@ -14,11 +14,20 @@ import '../styles/MyStyles.css';
 
 <BaseLayout>
 
-	<Date />
-
-	<Time />
+	<div class="flex justify-center bg-blue-300 rounded-2xl hover:bg-blue-200">
+		<h1 class="m-5 font-bold text-3xl text-white">Smart Mirror</h1>
+	</div>
 	
-	<Weather />
+	<div class="flex justify-center w-full h-60">
+		<Date />
+
+		<Time />
+	</div>
+	
+	<div class="flex justify-center w-full h-60">
+		<Weather />
+	</div>
+	
 
 	<WebCam />
 	
