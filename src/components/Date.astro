@@ -77,11 +77,19 @@ dayOfWeek.textContent = allTheDays[gotDayOfWeek];
 </script>
 
 <!-- HTML -->
-<section class="date">
-    <h1>Date</h1>
-    <time>
-      <data class="month">Month</data>
-      <data class="dayOfMonth">00</data>, <data class="year">0000</data> -
-      <data class="dayOfWeek">SMTWTFS</data>
+<section class="date bg-blue-300 w-1/2 p-5 hover:w-full rounded-2xl my-2 mr-1 px-10 hover:bg-blue-200">
+  <div class="flex justify-center">
+    <img src="public/resources/calendar.png" alt="Calendar" class="w-12">
+  </div>
+    
+    <time class="font-bold text-lg text-white font-serif text-center">
+      <div class="mt-2">
+        <data class="dayOfWeek">SMTWTFS</data>
+      </div>
+      
+      <div >
+        <data class="month">Month</data>
+        <data class="dayOfMonth">00</data>, <data class="year">0000</data>
+      </div>
     </time>
   </section>

@@ -18,6 +18,8 @@ const url = `${queryEndpoint}?q=${queryCity}&appid=${APIKEY}&units=${queryUnits}
 // Get DOM Elements
 const city = document.querySelector('.city');
 const temp = document.querySelector('.temp');
+const wind_speed = document.querySelector('.wind_speed');
+const feels_like = document.querySelector('.feels_like');
 const icon = document.querySelector('.icon');
 
 // Using fetch to get data
@@ -33,7 +35,9 @@ fetch(url)
     
     // Set DOM Elements
     city.textContent = data.name; 
-    temp.textContent = data.main.temp;
+    temp.textContent = `${data.main.temp}° F`;
+    feels_like.textContent = `Feels like ${data.main.feels_like}° F`;
+    wind_speed.textContent = `${data.wind.speed} mph wind`;
 
     icon.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
   
@@ -41,13 +45,23 @@ fetch(url)
 </script>
 
 
-<!-- Weather -->
-<section class="weather">
-
-      <h1>Weather</h1>
-      <data class="city">City</data>
-      <data class="temp">Temp</data>
-      <img class="icon" 
-      src="https://via.placeholder.com/150" alt="Placeholder">
-      
-</section>
+  <!-- HTML -->
+  <section class="weather bg-blue-300 w-1/2 hover:w-full rounded-2xl hover:bg-blue-200">
+    <div class="flex justify-center">
+      <img class="icon w-13" 
+        src="https://via.placeholder.com/150" alt="Placeholder">
+    </div>
+    
+    <time class="font-bold text-lg text-white font-serif text-center">
+      <div class="mt-1">
+        <data class="city">City</data>
+        <data class="temp">Temp</data>
+      </div>
+      <div class="mt-1">
+        <data class="feels_like">Feels Like</data>
+      </div>
+      <div class="mt-1">
+        <data class="wind_speed">Wind Speed</data>
+      </div>
+    </time>
+  </section>
